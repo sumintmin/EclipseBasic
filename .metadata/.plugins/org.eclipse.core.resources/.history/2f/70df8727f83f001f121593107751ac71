@@ -1,0 +1,28 @@
+package kr.or.ddit.study06.sec02;
+
+public class StudentMain {
+	public static void main(String[] args) {
+		// 학생 3명 만들고 이름, 점수 입력
+		Student st1 = new Student();
+		st1.name = "hello";
+		st1.eng = 56;
+		st1.kor = 32;
+		st1.math = 34;
+		
+		Student st2 = new Student();
+		st2.eng = 32;
+		st2.math = 12;
+		st2.kor = 54;
+		st2.name = "홍길";
+		
+		Student st3 = new Student();
+		st3.name = "nancy";
+		st3.eng = 45;
+		st3.kor = 12;
+		st3.math = 46;
+		
+		System.out.println("이름 : " + st1.name + " 국어" + st1.kor + " 영어 : " + st1.eng + " 수학 : " + st1.math);
+		System.out.println("이름 : " + st2.name + " 국어" + st2.kor + " 영어 : " + st2.eng + " 수학 : " + st2.math);
+		System.out.println("이름 : " + st3.name + " 국어" + st3.kor + " 영어 : " + st3.eng + " 수학 : " + st3.math);
+	}
+}

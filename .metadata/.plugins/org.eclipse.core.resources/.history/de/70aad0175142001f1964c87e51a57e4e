@@ -1,0 +1,10 @@
+package kr.or.ddit.study06.sec03;
+
+public class StudentMain {
+	public static void main(String[] args) {
+		Student s1 = new Student("육수민", 25);
+		System.out.println(s1.name + s1.age);
+		Student s2 = new Student("302", "nihao", 32);
+		System.out.println(s2.age + s2.roomNo + s2.name);
+	}
+}

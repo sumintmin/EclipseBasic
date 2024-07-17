@@ -1,0 +1,26 @@
+package kr.or.ddit.test;
+
+import java.util.Scanner;
+
+public class hanagman {
+	
+	Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		hanagman obj = new hanagman();
+		obj.process();
+
+	}
+
+	public void process() {
+		
+		String[] word = {"airplane", "sand", "flower", "school", "dream"};
+		
+		for (int i = 0; i < word.length; i++) {
+			int ran = Math.random() * word.length();
+			System.out.println(ran);
+		}
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package kr.or.ddit.study06.sec03;
+
+public class SingMain {
+	public static void main(String[] args) {
+		Sing s = new Sing("아딱질", "아픈건딱질색이니까", "idle");
+		System.out.println(s.title + " " + s.lyrics + " " + s.singer);
+	}
+
+}

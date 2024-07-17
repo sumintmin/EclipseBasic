@@ -1,0 +1,7 @@
+package kr.or.ddit.study06.sec03;
+
+public class PeopleMain {
+	public static void main(String[] args) {
+		People p = new People("육수민", 25);
+	}
+}

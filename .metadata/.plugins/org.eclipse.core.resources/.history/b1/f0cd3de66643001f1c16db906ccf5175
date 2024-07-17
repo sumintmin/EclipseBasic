@@ -1,0 +1,34 @@
+package kr.or.ddit.test;
+
+class Person{
+	String name;
+	public Person() {}
+	public Person(String theName) {
+		this.name = theName;
+	}
+}
+
+public class EmployeeTest extends Person {
+	String id;
+	public EmployeeTest() {
+		super();
+	}
+	public EmployeeTest(String name) {
+		super(name);
+	}
+	public EmployeeTest(String name, String id) {
+		super(name);
+		this.id = id;
+	}
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + " name="+name+ "]";
+	}
+}
+
+public class EmployeeTest{
+	public static void main(String[] args) {
+		EmployeeTest e = new EmployeeTest("kim", "20210001");
+		System.out.println(e);
+	}
+};

@@ -1,0 +1,32 @@
+package kr.or.ddit.study06.sec03;
+
+public class Student {
+	
+	String nation;
+	String roomNo;
+	String name;
+	int age;
+	
+	public Student(String name, int age) {
+		nation = "한국"; // 얘네는 왜 this 안써 파라미터가 아니라서?
+		roomNo = "401호";
+		this.name = name;
+		this.age = age;
+	}
+	
+	// 다른 호실 입력받기
+	public Student(String roomNo, String name, int age) {
+		nation = "한국"; // 얘네는 왜 this 안써 파라미터가 아니라서?
+		this.roomNo = roomNo;
+		this.name = name;
+		this.age = age;
+	}
+	
+	public Student(String nation, String roomNo, String name, int age) {
+		this.nation = nation;
+		this.roomNo = roomNo;
+		this.name = name;
+		this.age = age;
+	}
+// 오버로딩을 지원하는 이유는 이런 특이 케이스를 입력하기 위해 지원한다.
+}

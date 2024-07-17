@@ -1,0 +1,11 @@
+package kr.or.ddit.study06.sec03;
+
+public class TvMain {
+	public static void main(String[] args) {
+		Tv tv = new Tv();
+		
+		Tv t = new Tv("필드1", 2);
+		
+		System.out.println(tv.name + ", " + t.company);
+	}
+}

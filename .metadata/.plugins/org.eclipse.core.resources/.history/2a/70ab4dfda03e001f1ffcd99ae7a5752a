@@ -1,0 +1,87 @@
+package kr.or.ddit.homework;
+
+import java.util.Scanner;
+
+public class Homework07 {
+	Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		Homework07 obj = new Homework07();
+		obj.process();
+
+	}
+
+	public void process() {
+		//문자 맞추기 게임
+		
+		String[] words = {"airplane", "apple", "bicycle", "carrot", "cloud", "fruits", "public", "NULL",
+				"near", "careless"};
+		
+		int wordSel = (int)(Math.random()*words.length);
+		
+		String word = words[wordSel];
+		System.out.println(word);
+		
+		// 문자열 -> 문자 배열
+		// toCharArray
+		char[] wordChars = word.toCharArray();
+//		for (int i = 0; i < wordChars.length; i++) {
+//			System.out.println(wordChars[i]);
+//		}
+		
+//		
+		
+		for (int i = 0; i < 10000; i++) {
+			int ran = (int)(Math.random() * wordChars.length);
+			System.out.println(ran);
+			char temp = wordChars[0];
+			wordChars[0] = wordChars[ran];
+			wordChars[ran] = temp;
+//			System.out.print(temp);
+//			problem += temp;
+					}
+		
+//		while(true) {
+//			String input = sc.next();
+//			char[] w = input.toCharArray();
+//			for (int i = 0; i < w.length; i++) {
+//				for (int j = 0; j < problems.length; j++) {
+//					if (w[i] == problems[j]) {
+//						System.out.println("정답");
+//					}else {
+//						System.out.println("오답");
+//					}
+//				}
+//				if (w[i] == temp[i]) {
+//					
+//				}
+//				System.out.println(w[i]);
+			}
+			
+//		}
+//			String input = sc.next();
+//			while(true) {
+//				for (int j = 0; j < temp.length(); j++) {
+//					if (input == wordChars[0]) {
+//						System.out.println("정답");
+//					}
+//				}
+				// 섞인 문자열을 출력하고
+				// 정답을 맞추세요
+				// 		정답이 틀린 경우 계속 진행
+				// 		정답을 맞춘 경우 반복문 종료 후 몇번 시행했는지 출력
+				
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+	
+

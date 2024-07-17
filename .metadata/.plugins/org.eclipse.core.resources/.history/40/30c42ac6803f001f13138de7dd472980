@@ -1,0 +1,50 @@
+package kr.or.ddit.test;
+
+import java.util.Scanner;
+
+public class buuble {
+	Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		buuble obj = new buuble();
+		obj.process();
+
+	}
+
+	public void process() {
+	
+		int[][] scores = {
+				
+				{90,80,70,0,0,1},
+				{84,72,65,0,0,1},
+				{87,99,42,0,0,1},
+				{77,61,81,0,0,1},
+				{90,77,92,0,0,1},
+		};
+		
+		int[] number = {1,2,3,4,5};
+		int[][] finals = new int[5][6];
+		int[] temp0 = new int[6];
+		int[] temp1 = new int[6];
+		int[] temp2 = new int[6];
+		int[] temp3 = new int[6];
+		int[] temp4 = new int[6];
+		
+		for (int j = 0; j < 5; j++) {
+			for (int i = 0; i < 6; i++) {
+				temp0[i] = scores[0][i];
+				temp1[i] = scores[1][i];
+				temp2[i] = scores[2][i];
+				temp3[i] = scores[3][i];
+				temp4[i] = scores[4][i];
+			}
+			
+		}
+		
+		for (int i = 0; i < 6; i++) {
+			finals[0][i] = temp0[i];
+		}
+		
+		
+	}
+}

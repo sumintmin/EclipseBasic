@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.homework.Homework04"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.study04.sec02.ForExample01"/>
+    <fullyQualifiedTypeName name="sun.java2d.loops.ScaledBlit"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.homework.Homework05"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.study04.sec02.WhileExample01"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.study05.sec02.ArrayExample02"/>
+    <fullyQualifiedTypeName name="com.sun.tools.jdeprscan.scan.Scan"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.homework.Homework08"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.study05.sec03.WeekMain"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.nio.file.Files"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.study11.StringExample"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+</qualifiedTypeNameHistroy>
