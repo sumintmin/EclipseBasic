@@ -1,0 +1,19 @@
+package kr.or.ddit.study06.sec06;
+
+public class PersonName {
+	
+	public static void main(String[] args) {
+		Person p1 = new Person();
+		p1.setName("박광제");
+		p1.setAge(20);
+		
+		Person p2 = new Person();
+		p2.setName("우광제");
+		p2.setAge(20);
+		
+		System.out.println(p1.getName() + "," + p1.getAge());
+		// 입력은 set 갖고올땐 get
+	}
+
+}
+

@@ -1,0 +1,24 @@
+package kr.or.ddit.study13.list;
+
+import java.util.List;
+
+public class ArrayListExample02 {
+	public static void main(String[] args) {
+		// <>는 제네릭 이라고 한다.
+		// 제네릭<>
+		// 내가 원하는 타입으로 설정할 수 있음
+		// 생략한다면 Object가 기본 타입
+		
+		// <string> 적어주면 int값 넣을 수 없어용
+		List<String> list = new ArrayList();
+		list.add("a");
+		
+		String str = list.get(0);
+		
+		List<Integer> list2 = new ArrayList();
+		list2.add(10);
+		
+		
+	}
+
+}

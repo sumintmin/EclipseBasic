@@ -1,0 +1,27 @@
+package kr.or.ddit.study07;
+
+public class ExtendObject extends SuperObject{
+	
+	public static void main(String[] args) {
+		ExtendObject eo = new ExtendObject();
+		eo.field1 = 10;
+		eo.method1();
+		System.out.println(eo.field1);
+		System.out.println(eo);
+		
+		
+	}
+	
+	@Override
+	public void method1() { // 필드와 메소드의 메소드
+		// super 부모클래스를 의미함
+		System.out.println("자식 메소드");
+		super.method1();
+	}
+	
+	@Override
+	public String toString() {
+		return "field1 = " + field1;
+	}
+
+}

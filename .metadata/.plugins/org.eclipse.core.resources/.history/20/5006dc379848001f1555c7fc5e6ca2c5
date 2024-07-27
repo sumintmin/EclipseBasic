@@ -1,0 +1,57 @@
+package kr.or.ddit.study07.ani;
+
+import kr.or.ddit.util.ScanUtil;
+
+public class AnimalMain{
+	
+	public static void main(String[] args) {
+		
+		System.out.println("1. 고양이");
+		System.out.println("2. 강아지");
+		System.out.println("3. 소");
+		
+		int sel = ScanUtil.nextInt("선택 : ");
+		
+		Animal ani = null;
+		
+		if(sel == 1) {
+//			Cat cat = new Cat();
+//			cat.cry();
+//			cat.sing(); // 불편한 호출법
+			
+			ani = new Cat(); // 다형성의 기본 : 오버라이드
+		}
+		if(sel == 2) {
+//			Dog dog = new Dog();
+//			dog.cry();
+//			dog.sing();
+			ani  = new Dog();
+		}
+		
+		if(sel == 3) {
+			ani = new Cow();
+			
+		}
+		
+		ani.cry();
+		ani.sing();
+		
+		Cow cow = (Cow)ani; // 타입 변환 
+		// 자식 클래스가 더 작은 데이터다.
+		// long 타입을 int에 담으려면
+		// int i = 10;
+		// long l1 = i; // 자동타입변환이 이루어진다...
+		// 큰 값 <- 작은 값 자동 타입 변환
+		// 작은 값 <- 큰 값 강제 타입변환
+		long l2 = 10;
+		int i2 = (int)l2;
+		// like 검색문만 수정해도 속도가 엄청 빨라진다. oracle은 옵티마이저가 확실하게 잡아줌.
+		// 순서만 바꿔도 속도가 올라간다.
+		
+		
+		
+		
+		
+	}
+
+}

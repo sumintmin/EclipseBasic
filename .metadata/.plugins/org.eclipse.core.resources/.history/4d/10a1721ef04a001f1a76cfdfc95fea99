@@ -1,0 +1,73 @@
+package kr.or.ddit.study13;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kr.or.ddit.util.ScanUtil;
+import lombok.Data;
+
+public class MemberList {
+	// CRUD
+	// create read update delete
+	
+	// 회원가입     조회        변경       삭제
+	
+	public static void main(String[] args) {
+		MemberList obj = new MemberList();
+		obj.process();
+	}
+	
+	List<Member> list = new ArrayList();
+	public void process() {
+		while(true) {
+			System.out.println("1. 회원 가입");
+			addMember();
+			System.out.println("2. 회원 조회");
+			printMember();
+			System.out.println("3. 회원 변경");
+			System.out.println("4. 회원 탈퇴");
+			int sel = ScanUtil.nextInt("선택 : ");
+			if(sel == 1) addMember();
+			if(sel == 2) printMember();
+//			if(sel == 3) updateMember();
+		}
+	}
+	
+	public void printMember() {
+		Member member = new Member();
+//		member.getAge()
+//		System.out.println(member.getName());
+//		System.out.println(member.getAddr());
+//		System.out.println(member.getAge());
+		
+//		for (int i = 0; i < list.size(); i++) {
+//			Member mem = list.get(i);
+//			System.out.println(mem);
+//		}
+		
+		for(Member mem : list) {
+			System.out.println(mem);
+		}
+	}
+	
+	public void addMember() {
+		// list에 회원을 담아준다
+		Member member = new Member();
+		// 회원 정보 입력 받고 list에 넣어보기
+		member.setName(ScanUtil.nextLine("이름: "));
+		member.setAddr(ScanUtil.nextLine("주소: "));
+		member.setAge(ScanUtil.nextInt("나이: "));
+		
+		list.add(member);
+		
+	}
+}
+
+
+@Data
+class Member{
+	private String name;
+	private int age;
+	private String addr;
+	
+}

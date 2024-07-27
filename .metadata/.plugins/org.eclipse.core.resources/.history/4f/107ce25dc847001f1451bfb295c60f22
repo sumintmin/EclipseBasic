@@ -1,0 +1,9 @@
+package kr.or.ddit.study06.sec06;
+
+public class SingMain {
+
+	public static void main(String[] args) {
+		Sing s = new Sing("아이들", "아딱질", 2024);
+		System.out.println(s.getSinger());
+	}
+}

@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="set"/>
 		<list key="findhistory">
+			<item value="set"/>
+			<item value="week"/>
 			<item value="s2.kor = 98;"/>
 			<item value="copy"/>
 			<item value="년도"/>

@@ -1,0 +1,22 @@
+package kr.or.ddit.study13;
+
+public class CustomArrayList {
+	String[] strList;
+	int size;
+	
+	
+	public CustomArrayList() {
+		strList = new String[10];
+	}
+	
+	public void add(String str) {
+		// 자동 확장
+		if(size == strList.length) {
+			String[] tempList = new String[size+ 10];
+			System.arraycopy(strList, 0, tempList, 0, size);
+			strList = tempList;
+		}
+		strList[size++] = str;
+	}
+	
+}

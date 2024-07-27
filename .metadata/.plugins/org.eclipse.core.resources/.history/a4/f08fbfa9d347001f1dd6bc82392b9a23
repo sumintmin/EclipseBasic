@@ -1,0 +1,39 @@
+package kr.or.ddit.study06.sec05;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class DBMain {
+	
+	Connection conn;
+	Statement stmt;
+	ResultSet rs;
+	
+	public static void main(String[] args) {
+		DBMain db = new DBMain();
+		db.selectAll();
+	}
+	
+	public void selectAll() {
+		try {
+			
+			conn = DBConn.getConnection();
+			stmt = conn.createStatement();
+			String sql = "SELECT * FROM MEMBER";
+			
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				String mid = rs.getString("mem_id");
+				String mname = rs.getString("mem_name");
+//				String addr = rs.getString("addr");
+				
+//				System.out.println(mid + "\t" + mname + "\t" + addr);
+				System.out.println(mid + "\t" + mname );
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

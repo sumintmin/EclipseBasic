@@ -1,0 +1,46 @@
+package kr.or.ddit.study07.vehicle;
+
+import java.util.Scanner;
+
+public class ClassException1 {
+	
+	Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		ClassException1 obj = new ClassException1();
+		obj.process();
+
+	}
+
+	public void process() {
+		method1();
+	}
+	
+	public void method2() {
+		// 실행 예외 (Runtime Exception)
+		// 컴파일 과정에서 체크하지 않음
+		// 실행시 예측할 수 없이 갑자기 발생함.
+		System.out.println("숫자 입력 : ");
+		int num = sc.nextInt();
+		
+	}
+	
+	public void method1() {
+		// 일반 예외
+		// 컴파일러 체크 예외
+		// 자바 소스 컴파일 과정에서 해당 예외 처리가 있는지 검사됨
+		//Thread.sleep(10);을 치고 sleep에 커서 올리면 선택지 두개 뜨는데 surround 를 선택한다.
+		// 문제는 일반예외가 아니라 런타임에러
+		try {
+			Thread.sleep(10);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+	
+
+}

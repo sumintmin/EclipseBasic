@@ -1,0 +1,23 @@
+package kr.or.ddit.study06.sec06;
+
+public class Sing {
+	// 가수, 가사, 연도
+	private String singer;
+	private String lyrics;
+	private int year;
+	// SingMain에서 2개 생성하고 출력해보기
+	
+	// toString 사용하지 말고 getter 이용해볼것
+	
+	
+	public String getSinger() {
+		return singer;
+	}
+	public String getLyrics() {
+		return lyrics;
+	}
+	public int year() {
+		return year;
+	}
+
+}

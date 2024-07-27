@@ -1,0 +1,100 @@
+package kr.or.ddit.homework.home14;
+
+import java.sql.Connection;
+
+
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Scanner;
+
+
+public class DBMain {
+	
+	Connection conn; // connection 객체 생성
+	Statement stmt;
+	ResultSet rs; // sql문 받아오기
+	
+	// JNDI(Java Naming and Directory Interface)
+	// 제공처 : JNDI 디렉터리 서비스
+	// 설명 : 제공된 데이터 및 객체를 발견하고 참고(lookup)하기 위한 자바 api
+	// 외부에 있는 객체를 가져오기 위한 기술
+	// ex. tomcat, was 특정 폴더에 필요한 라이브러리를 사용하기 위해 jndi를 사용
+	
+	// DBCP(database connection pool)
+	// 미리 db와 연결해서 저장해뒀다가 필요할 때 가져다 쓰고 반환
+	// db 부하 줄이고 자원을 효율적으로 관리 o
+	
+	
+	// statement 객체: 실제 데이터베이스에 sql 쿼리문을 보내기 위해 필요한 객체
+	
+	// 메소드
+	// executeQuery(String sql) select 문을 실행할 때 사용한다(resultSet 객체 반환)
+	// executeUpdate(String sql) 삽입, 수정, 삭제와 관련된 sql문 실행에 사용한다.
+	// close() statement 객체를 반환할 때 사용한다(연결 종료)
+	
+	// 객체 생성방법
+	// jdbc 연결인 connection 안의 메소드인 createStatement()로 생성 가능
+	// Statement stmt = conn.createStatement();
+	
+	
+	// 필요한 쿼리문 작성
+	// connection에서 접속한 db에 있는 테이블에 관한 내용들만 쿼리문을 작성할 것
+	// stmt.executeQuery("Select * from user_tbl");
+	
+	// 받아온 결과값을 resultSet에 저장한다.
+	// resultSet = stmt.executeQuery("SELECT * from user_tbl");
+	
+	// 저장한 값을 출력 
+	// resultSet은 행 단위로 데이터를 처리한다.
+	// next()메소드로 다음 행 이동 ( 있으면 true 없으면 false)
+	
+	// getXXX() 메소드
+	// getXXX에는 DB의 컬럼 타입(int String date 등등)이 들어감
+	// ()안에는 인자값으로 컬럼 위치, 컬럼 이름을 넣으면 됨
+	public static void main(String[] args) {
+		DBMain db = new DBMain();
+		db.selectAll();
+	}
+	
+	Scanner sc = new Scanner(System.in);
+	public Member[] selectAll() {
+		Member[] memberList = null; // resultSet
+		try {
+			
+			conn = DBConn.getConnection();
+			stmt = conn.createStatement();
+			String sql = "SELECT * FROM MEMBER";
+			
+			rs = stmt.executeQuery(sql);
+			
+			// 취미랑 직업 중에서 선택하고
+			// 취미 선택 후 -> 바둑 입력하면 바둑 취미인 사람만 출력
+			// 직업 선택 후 -> 주부 입력하면 주부 직업인 사람만 출력
+			
+			Member mem = new Member();
+			// scanutil에 값을 넣지 않으면 에러
+			int sel = ScanUtil.nextInt("1. 취미 \n2. 직업");
+			if(sel == 1) {
+				String search = ScanUtil.nextLine("검색");
+				String mlike = rs.getString("mem_like = \'" + search + "\'");
+//				String 
+//				String like_sql = sql + " WHERE mem_like =" + "\"" + search + "\"";
+//				System.out.println(like_sql);
+				mem.setMem_like(mlike);
+				System.out.println(mlike);
+			}
+			if(sel == 2) {
+				String search = ScanUtil.nextLine("검색");
+				String mjob = rs.getString(search);
+				mem.setMem_job(mjob);
+				System.out.println(mem);
+				
+			}
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return memberList;
+	}
+}

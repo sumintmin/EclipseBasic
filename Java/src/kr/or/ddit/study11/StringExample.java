@@ -29,11 +29,17 @@ public class StringExample {
 //		method6();
 //		method7();
 //		method8();
+		method9();
 	}
 	
-
+	public void method9() {
+		String test = "29183";
+		String search = "7";
+		System.out.println(test.indexOf(search)+1); // 없는 문자는 -1반환하는데 +1했으니까 0나옴
+	}
 	
 	public void method8() {
+		
 		
 		String abc = "abcdefg";
 		System.out.println(abc.substring(3));
@@ -122,8 +128,10 @@ public class StringExample {
 	}
 	
 	public void method3() {
+		
 		String test= "바보dsfsg";
 		test = test.replace("바보", "**");
+		test.contentEquals(cs)
 //		test = test.replace("바보", "");
 		System.out.println(test);
 		

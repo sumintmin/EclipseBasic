@@ -1,0 +1,68 @@
+package kr.or.ddit.homework.home14;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class DBMain_test {
+	Connection conn;
+	Statement stmt;
+	ResultSet rs;
+	
+	public static void main(String[] args) {
+		DBMain db = new DBMain();
+		db.selectAll();
+	}
+	
+	public Member[] selectAll() {
+		Member[] memberList = null;
+		
+		try {
+			
+			conn = DBConn.getConnection();
+			stmt = conn.createStatement();
+			String sql = "SELECT * FROM MEMBER";
+			
+			rs = stmt.executeQuery(sql);
+			
+			// 취미랑 직업 중에서 선택 , 취미 -> 바둑 출력
+			// 직업 선택 -> 주부 출력
+			while(rs.next()) {
+				Member mem = new Member();
+				String mid = rs.getString("mem_id");
+				String mname = rs.getString("mem_name");
+				String mlike = rs.getString("mem_like");
+				String mjob = rs.getNString("mem_job");
+				
+				mem.setMem_id(mid);
+				mem.setMem_name(mname);
+				mem.setMem_like(mlike);
+				mem.setMem_job(mjob);
+				
+				System.out.println(mname);
+				System.out.println(mlike.equals("바둑"));
+				
+			}
+			
+//			int sel = ScanUtil.nextInt("1. 취미, 2. 직업");
+//			if(sel == 1) {
+//				String search = ScanUtil.nextLine("검색");
+				
+//				continue;
+//			}
+//			if(sel == 2) {
+//				String search = ScanUtil.nextLine("검색");
+//				continue;
+//			}
+					
+			
+//		} 
+		catch (Exception e) {
+//			e.printStackTrace();
+		}
+		return memberList;
+//	}
+	
+	
+	
+}

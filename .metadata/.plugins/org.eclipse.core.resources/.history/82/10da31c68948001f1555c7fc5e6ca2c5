@@ -1,0 +1,14 @@
+package kr.or.ddit.study07;
+
+public class ExtendObject extends SuperObject{
+	
+	public static void main(String[] args) {
+		ExtendObject eo = new ExtendObject();
+		eo.field1 = 10;
+		eo.method1();
+		System.out.println(field1);
+		
+		
+	}
+
+}

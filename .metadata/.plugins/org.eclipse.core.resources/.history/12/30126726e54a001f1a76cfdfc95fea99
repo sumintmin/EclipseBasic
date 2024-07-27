@@ -1,0 +1,11 @@
+package kr.or.ddit.study13;
+
+public class CustomArrayList {
+// customarraylist
+	String[] strList;
+	
+	public CustumArrayList() {
+		strList = new String[10];
+		
+	}
+}
