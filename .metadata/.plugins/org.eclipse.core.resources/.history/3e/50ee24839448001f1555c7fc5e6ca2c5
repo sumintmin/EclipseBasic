@@ -1,9 +1,0 @@
-package kr.or.ddit.study07.ani;
-
-public class Cow {
-
-	
-	private void cry() {
-		System.out.println("음메");
-	}
-}

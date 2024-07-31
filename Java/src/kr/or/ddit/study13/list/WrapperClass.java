@@ -9,7 +9,7 @@ public class WrapperClass {
 		
 		// 언박싱 클래스 -> 기본타입 ( 클래스를 기본 타입에 담아주는 것)
 		byte bte = new Byte("10");
-		short sht; = new Short("10");
+		short sht = new Short("10");
 		int i;
 		char c;
 		double d;
