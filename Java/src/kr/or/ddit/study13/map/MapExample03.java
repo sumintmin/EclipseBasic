@@ -46,9 +46,14 @@ public class MapExample03 {
 			List<Map<String, Object>> parkList = parkList(list, key);
 			
 			// 출력
+			int money = getMoney(sum);
+			List<Map<>>
 			// 주차 시간
+			System.out.println("총 주차시간 : " + sum);
 			// 주차 요금
+			System.out.println("주차 요금" + money);
 			// 상세 주차 내역
+			System.out.println(time + "\t" + carNum + "\t" + inout);
 			
 		}
 	}
@@ -85,6 +90,28 @@ public class MapExample03 {
 		return money;
 	}
 	
+	
+	/*
+	 * 200분 -> 5000 + 600 *2 -> 6200원
+	 * 201분 -> 
+	 * if(time <= 180) return 5000;
+	 * return 5000 + (time-180)/10*600;
+	 * 
+	 * 
+	 * public List<Map<String, Object>> parkList(List<Map<String, Object>> list, String carNum_){
+	 * 
+	 * 		for(Map<String, Object> map : list){
+	 * 			String time = (String)map.get("시각");
+	 * 			String carNum = (String)map.get("차량 번호");
+	 * 			String inout = (String)map.get("내역");
+	 * if(!carNum.equals(carNum_)) continue;
+	 * result.add(map);
+	 * 
+	 * }
+	 * return result;
+	 * 
+	 * 
+	 */
 	
 	public int getTime(String time) {
 		// 05:34 -> 05, 34로 분리 -> 05*60 + 34;
@@ -205,6 +232,12 @@ public class MapExample03 {
 		return list;
 	}
 	
-	
+	// 컬럼, 받아올 데이터
+	// 리스트, 맵, 스트링 오브젝트
+	// 리스트에서 값 꺼내기 - get(인덱스), 숫자
+	// 맵은 get으로 꺼낼 때 key가 필요하다
+	// put, get, list는 add랑 get
+	// 입력받고 이런건 html에서 만든다.
+	// 일반적으로는 데이터를 어떻게 갖고와서 받아올건지가 중요하다
 
 }

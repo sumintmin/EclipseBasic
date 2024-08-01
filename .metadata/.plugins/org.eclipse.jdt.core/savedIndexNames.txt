@@ -2,9 +2,7 @@ INDEX VERSION 1.134+D:\A_TeachingMaterial\01_Java\workspace\.metadata\.plugins\o
 727880163.index
 1808056260.index
 2004882815.index
-3762737250.index
 268718434.index
-3316466471.index
 2937349280.index
 1865797976.index
 2622688286.index

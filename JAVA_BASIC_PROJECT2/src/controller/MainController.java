@@ -15,7 +15,7 @@ public class MainController {
 	BoardService boardService = BoardService.getInstance();
 	Map<String, Object> paramMap = new HashMap();
 	// alt shift r 
-	public static void main(String[] args) {
+	public static void main(String[] ) {
 		MainController obj = new MainController();
 		obj.process();
 	}
